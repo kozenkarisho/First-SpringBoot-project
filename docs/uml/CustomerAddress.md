@@ -1,17 +1,18 @@
+```mermaid
 classDiagram
-class Customer {
--Long id
--String name
--String email
--Address address
-+Customer()
-+Customer(Long id, String name, String email, Address address)
-+getId() Long
-+getName() String
-+getEmail() String
-+getAddress() Address
-}
-
+    class Custemor {
+        -long id
+        -String name
+        -String email
+        -Address address
+        +Customer()
+        +Customer(Long id,String name,String email,Address address)
+        +getId() Long
+        +getName() String
+        +getEmail() String
+        +getAddress() Address
+    }
+    
     class Address {
         -String street
         -String city
@@ -20,7 +21,12 @@ class Customer {
         +Address(String street, String city, String postcode)
         +getStreet() String
         +getCity() String
-        +getPostcode() String
+        +getPostcode() String   
+    
+    
+    
     }
-
+    
     Customer --> Address : has
+
+```
