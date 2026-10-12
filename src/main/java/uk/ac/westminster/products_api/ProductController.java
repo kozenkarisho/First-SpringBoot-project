@@ -1,10 +1,12 @@
 package uk.ac.westminster.products_api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 
 
 @RestController //This tells the spring:This class handles web requests and returns data like JSON
@@ -14,6 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/producuts")
 
 public class ProductController {
+
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping ("/products")
+    public List getAllProducts(){
+        return productService.getAllProducts();
+    }
+
+
 
     // @GetMapping tells spring: "Listen for HTTP requests at the URL /products/{id}."
     // The {id} part is a placeholder. It means it expects a variable value at the end of the URL (like /products/1 or /products/5).
