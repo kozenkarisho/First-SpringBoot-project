@@ -14,7 +14,7 @@ public class ProductService {
     private Long nextId = 1L;  //his remembers which id to hand out next.
 
 
-    private List <Product> getAllProducts(){
+    List <Product> getAllProducts(){
         return products;
     }
 
