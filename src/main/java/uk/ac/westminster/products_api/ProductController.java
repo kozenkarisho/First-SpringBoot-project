@@ -22,6 +22,11 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
+    @GetMapping("/products/search")
+    public List<Product> search(@RequestParam String name) {
+        return productService.findByName(name);
+    }
+
 
 
     // @GetMapping tells spring: "Listen for HTTP requests at the URL /products/{id}."
