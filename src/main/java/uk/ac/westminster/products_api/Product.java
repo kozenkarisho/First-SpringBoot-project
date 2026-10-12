@@ -11,6 +11,18 @@ public class Product {
         // in the future jackson creates the product with the incoming json
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Product (Long id, String name, double price){
         this.id = id ;
         this.name = name;
