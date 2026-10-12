@@ -45,6 +45,10 @@ public class ProductService {
         return  product;
     }
 
+    public void deleteProduct(Long id){
+        products.removeIf(p -> p.getId().equals(id));
+    }
+
 
 
 }
